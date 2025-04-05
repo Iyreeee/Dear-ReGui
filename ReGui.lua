@@ -815,7 +815,6 @@ type TagsList = {
 
 --// Compatibility 
 local EmptyFunction = function() end
-local GetHiddenUI = get_hidden_gui or gethui
 local NewReference = cloneref or function(Ins): Instance 
 	return Ins 
 end
@@ -827,6 +826,8 @@ local Services = setmetatable({}, {
 		return NewReference(Service)
 	end,
 })
+
+local GetHiddenUI = function() return NewReference(game:GetService("CoreGui")) end
 
 --// Core functions 
 --// Services
