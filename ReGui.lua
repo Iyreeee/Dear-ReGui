@@ -44,7 +44,15 @@ local ReGui = {
 	
 	--// Collections
 	_FlagCache = {},
-	_ErrorCache = {},
+	_ErrorCache = setmetatable({}, {
+		__newindex = function(self, key, value)
+			if not rawget(self, key) then
+				return
+			end
+
+			return rawset(self, key, value)
+		end
+	}),
 	Windows = {},
 	ActiveTooltips = {},
 	AnimationConnections = {},
