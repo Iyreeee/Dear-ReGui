@@ -2252,8 +2252,7 @@ function ReGui:SetProperties(Object: Instance, Properties)
 end
 
 function ReGui:InsertPrefab(Name: string, Properties): Instance
-	local Folder = self.Prefabs
-	local Prefabs = Folder.Prefabs
+	local Prefabs = ReGui.Prefabs
 
 	local Element = Prefabs:WaitForChild(Name)
 	local New = Element:Clone()
