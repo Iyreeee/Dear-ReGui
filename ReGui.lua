@@ -2429,8 +2429,8 @@ type WrapGeneration = {
 }
 function ReGui:WrapGeneration(Function, Data: WrapGeneration)
 	local Base = Data.Base
-	local Cache = self._FlagCache
-	local ErrorCache = self._ErrorCache
+	local Cache = ReGui._FlagCache
+	local ErrorCache = ReGui._ErrorCache
 
 	return function(Canvas, Flags, ...)
 		Flags = Flags or {}
