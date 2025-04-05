@@ -836,7 +836,7 @@ local Services = setmetatable({}, {
 })
 
 local GetHiddenUI = function() return NewReference(game:GetService("CoreGui")) end
-print('v3')
+print('v4')
 
 
 --// Core functions 
