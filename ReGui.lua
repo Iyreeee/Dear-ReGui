@@ -46,7 +46,7 @@ local ReGui = {
 	_FlagCache = {},
 	_ErrorCache = setmetatable({}, {
 		__newindex = function(self, key, value)
-			if not rawget(self, key) then
+			if self == ReGui and key == "_ErrorCache" then
 				return
 			end
 
@@ -836,7 +836,7 @@ local Services = setmetatable({}, {
 })
 
 local GetHiddenUI = function() return NewReference(game:GetService("CoreGui")) end
-print('v4')
+print('v5')
 
 
 --// Core functions 
